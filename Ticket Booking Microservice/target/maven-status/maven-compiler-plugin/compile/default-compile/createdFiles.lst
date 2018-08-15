@@ -1,0 +1,7 @@
+com\achin\ticketbooking\controller\TicketController.class
+com\achin\ticketbooking\model\Ticket.class
+com\achin\ticketbooking\repository\TicketRepository.class
+com\achin\ticketbooking\TicketBookingApplication.class
+com\achin\ticketbooking\model\Movie.class
+com\achin\ticketbooking\repository\MovieRepository.class
+com\achin\ticketbooking\config\ApplicationConfig.class
