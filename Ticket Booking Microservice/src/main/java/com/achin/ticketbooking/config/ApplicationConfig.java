@@ -36,7 +36,10 @@ public class ApplicationConfig extends WebSecurityConfigurerAdapter {
 		http.csrf().disable();
 		// http.authorizeRequests().antMatchers("/**").permitAll().anyRequest().authenticated();
 		http.httpBasic().and().authorizeRequests().antMatchers("/movie/**").hasRole("ADMIN")
-		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);;
+		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		
+		http.httpBasic().and().authorizeRequests().antMatchers("/tickets/**").hasRole("USER")
+		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 	}
 
 	private ApiInfo getApiInfo() {
@@ -49,5 +52,7 @@ public class ApplicationConfig extends WebSecurityConfigurerAdapter {
 	public void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication().passwordEncoder(NoOpPasswordEncoder.getInstance()).withUser("achin")
 				.password("achin").roles("ADMIN");
+		auth.inMemoryAuthentication().passwordEncoder(NoOpPasswordEncoder.getInstance()).withUser("dev")
+		.password("dev").roles("USER");
 	}
 }

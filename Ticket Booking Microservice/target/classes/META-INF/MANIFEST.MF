@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: ticket-booking
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: acgarg
+Implementation-Vendor-Id: com.devesh.ticketbooking
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Ticket-Booking-Microservice
+Created-By: Maven Integration for Eclipse
+
